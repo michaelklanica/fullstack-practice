@@ -57,8 +57,4 @@
     var displayArticles = document.querySelector('#articles');
     displayArticles.innerHTML = renderArticles(articles);
 
-
-
-
-
 })();
