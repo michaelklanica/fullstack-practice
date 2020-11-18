@@ -6,34 +6,96 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <meta charset="UTF-8">
+    <title>Listology.com</title>
+    <link rel="stylesheet" href="css/listology-style.css">
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-<h1>Hello, world!</h1>
+<div class="main-header">
+    <header>
+        <h1>Listology:</h1>
+        <nav class="menu-area">
+            <ul>
+                <li><a href="#">Browse</a>
+                    <ul class="dropdown-1">
+                        <li><a href="#">Recently Updated</a>
+                            <ul class="dropdown-2">
+                                <li><a href="#">Sound</a></li>
+                                <li><a href="#">Screen</a></li>
+                                <li><a href="#">Script</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Recent Comments</a></li>
+                        <li><a href="#">Most Discussed</a>
+                            <ul class="dropdown-2">
+                                <li><a href="#">Sound</a></li>
+                                <li><a href="#">Screen</a></li>
+                                <li><a href="#">Script</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Favorites</a>
+                            <ul class="dropdown-2">
+                                <li><a href="#">Recently Favorited</a></li>
+                                <li><a href="#">Most Favorited</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">User Directory</a></li>
+                    </ul>
+                </li>
+                <li><a  href="#">Random</a></li>
+                <li><a href="#">About</a>
+                    <ul class="dropdown-1">
+                        <li><a href="#">About Listology</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<main>
+    <section class="column-left">
+        <form action="POST" id="site-search">
+            <label for="search-site"><h3>Search the site</h3></label>
+            <input class="text-input" id="search-site" type="text" name="search-site">
+            <input class="button" type="submit" value="Search">
+        </form>
+        <article id="popular-today">
+            <h3>Today's popular content</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque dicta eaque eligendi error eum ex facere facilis laborum, natus non odit quidem quis quod repudiandae voluptate voluptatum. Facilis, fugiat.</p>
+        </article>
+        <article id="recent-updates">
+            <h3>Recent Updates</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, atque dicta eaque eligendi error eum ex facere facilis laborum, natus non odit quidem quis quod repudiandae voluptate voluptatum. Facilis, fugiat.</p>
+        </article>
+    </section>
+    <section class="column-center" id="articles">
+        <!--This is where the main arti-->
+    </section>
+    <section class="column-right">
+        <form action="POST" id="log-in">
+            <h3>User Login</h3>
+            <label for="username">Username:</label>
+            <input class="text-input" id="username" type="text" name="username">
+            <label for="password">Password:</label>
+            <input class="text-input" id="password" type="password" name="password" >
+            <input class="button" type="submit" value="Submit">
+            <a href="#">CREATE A NEW ACCOUNT</a>
+            <a href="#">REQUEST A NEW PASSWORD</a>
+        </form>
+    </section>
+</main>
+<footer>
 
-<!-- Optional JavaScript; choose one of the two! -->
+</footer>
+<script src="javascript.js"></script>
 
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-<!-- Option 2: jQuery, Popper.js, and Bootstrap JS
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
--->
 </body>
 </html>
-
